@@ -31,8 +31,8 @@ I uploaded on Vimeo the following screencasts that illustrate some of the excerc
 
 
 The hands-on activities are based on the following software, that you should install respectively on you PC and on your smartphone:
-- QGIS: you can download it from [here](https://www.qgis.org/en/site/forusers/download.html) and install on your PC. The recommended version is 3.18.3 'Zürich', available for Linux/Mac/Windows: other versions are OK as well but may display a slightly different interface.
-- Gaia GPS: you find it on the App store for your smartphone (Android or iOS). I found an old manual which in the Docs directory of this repository.
+- **QGIS**: you can download it from [here](https://www.qgis.org/en/site/forusers/download.html) and install on your PC. The recommended version is 3.18.3 'Zürich', available for Linux/Mac/Windows: other versions are OK as well but may display a slightly different interface.
+- **Gaia GPS**: you find it on the App store for your smartphone (Android or iOS). I found an old manual which in the Docs directory of this repository.
 
 In order to carry out the practical activities you also need to create an account to the following web services (free account):
 - OpenStreetMap: https://www.openstreetmap.org/
