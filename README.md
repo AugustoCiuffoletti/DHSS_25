@@ -35,10 +35,10 @@ The hands-on activities are based on the following software, that you should ins
 - **Gaia GPS**: you find it on the App store for your smartphone (Android or iOS). I found an old manual which in the Docs directory of this repository.
 
 In order to carry out the practical activities you also need to create an account to the following web services (free account):
-- OpenStreetMap: https://www.openstreetmap.org/
-- uMap: https://umap.openstreetmap.fr/it/
-- GaiaGPS: https://www.gaiagps.com/
-- Stackblitz: https://stackblitz.com/
-- Firebase: https://firebase.google.com/
+- [OpenStreetMap](https://www.openstreetmap.org/)
+- [uMap](https://umap.openstreetmap.fr/en/) (here use your OpenStreetMap account created above)
+- [GaiaGPS](https://www.gaiagps.com/)
+- [Stackblitz](https://stackblitz.com/) (here you need to create a gitHub account if you do not have already one)
+- [Firebase](https://firebase.google.com/) (no need to create an account if you have a Google one)
 
 
