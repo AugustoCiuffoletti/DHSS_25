@@ -43,6 +43,8 @@ deliver:
 	rsync -av Makefile compile.sh header* images $(DELIVERYDIR)/DHSS_2025/
 # Copia sul PC della presentazione
 	rsync -av $(DELIVERYDIR)/DHSS_2025/ $(PC_PRESENTAZIONE):dt4h-gis-slides/
+# Sincronizza il repository github (DHSS:25)
+	cd $(DELIVERYDIR); make deliver 
 
 
 %.pdf: %/slides.wiki header.wiki header_printable.wiki header_compact.wiki header_common.wiki
