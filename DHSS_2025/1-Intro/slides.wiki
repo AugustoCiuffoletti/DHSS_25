@@ -1,0 +1,232 @@
+
+
+== The many ways of GIS for digital humanities ==
+
+==== What is digital cartography (aka GIS) ====
+*<+-> Digital cartography shares fundamental principles with classical cartography:
+**<+-> It records the geographical position of objects or reference points  
+**<+-> It represents the morphological features of the landscape
+**<+-> It maps travel routes and pathways
+**<+-> It associates specific attributes and characteristics with mapped objects 
+**<+-> It can depict imaginary landscapes or reconstruct past and future territorial scenarios 
+
+==== Why do we use digital cartography? ====
+  
+*<+-> Digital and conventional cartography share similar purposes  
+*<+-> Both serve as essential tools for:  
+**<+-> Measuring geometric dimensions of objects and areas 
+**<+-> Defining and recording state and property boundaries
+**<+-> Planning and navigating routes to specific destinations
+**<+-> Documenting journeys and various forms of travel
+**<+-> Geographically situating human or natural events to analyze relationships
+**<+-> Depicting and teaching about distant or inaccessible places
+*<+-> These applications can relate to the present, as well as to past or future scenarios
+
+==== The advantages of digital cartography ====
+
+*<+-> Digital and traditional cartography differ primarily in the !medium! used to store maps
+**<+-> Digital maps are recorded on various types of digital media and accessed via suitable devices
+*<+-> This distinction brings several key advantages:  
+**<+-> !Easy sharing! due to the dematerialization of maps  
+**<+-> !Automatic acquisition! of positions and movements  
+**<+-> Ability to !merge data! from multiple maps  
+**<+-> Integration of !multimedia! information  
+**<+-> !Simplified! creation and reuse of maps 
+
+==== Cartography and public history ====
+
+*<+-> History and cartography are deeply interconnected
+**<+-> History records events in relation to !places!
+*<+-> The way we represent the world reflects our perspectives and values
+*<+-> Was a medieval geographer creating maps for his king a !public! historian? 
+**<+-> Engaging the public with the past 
+**<+-> Applying history to practical use
+**<+-> Encouraging critical reflection
+*<+-> Can the T-and-O map be considered a public history document?  
+*<+-> Will today's maps become public history documents in the future?  
+*<+-> Who has the capability to create such historical records?  
+**<+-> Digital cartography opens new perspectives on this sense
+**<+-> The answer depends on accessibility and widespread use
+
+==== Diffusion of digital cartography ====
+
+*<+-> Digital cartography relies on:
+**<+-> Powerful graphics processors  
+**<+-> High-definition displays  
+*<+-> In the Pentium era, these were largely inaccessible to PCs %The GIS book George Korte 2001  
+**<+-> ...limiting the advantages previously mentioned  
+*<+-> Digital cartography became widely affordable around 2005  
+*<+-> Today, nearly everyone carries a pocket-sized GIS engine  
+*<+-> Despite advancements, multiple representation standards still exist (standardization is ongoing)  
+*<+-> Cartography is now technically accessible to anyone  
+*<+-> Current challenges: 
+**<+-> !Simplifying access! to cartographic tools  
+**<+-> !Harmonizing representation! to enable data integration  
+*<+-> Future directions:  
+**<+-> Developing !autonomous devices! to continuously record environmental features    
+**<+-> Enhancing the !communication! of historical narratives  
+
+==== Web Mapping ====
+
+*<+-> The Web is a powerful medium for sharing resources  
+*<+-> Web mapping technology emerged a few years after the creation of the WWW in 1989  
+*<+-> The evolution of the Web paralleled the advancement of Web mapping  
+*<+-> In the early '90s, maps were primarily static, offering limited interaction or layering  
+*<+-> By the late '90s, users gained the ability to manipulate maps and create new ones  
+**<+-> ...with computationally intensive tasks handled on the server side  
+*<+-> Between 2000 and 2005, advancements in Web technologies facilitated the rise of Web mapping services  
+**<+-> ...enabling seamless integration with other services via standardized interfaces  
+**<+-> ...making the definition of standard representations and protocols increasingly important  
+
+==== Web Mapping in Web 2.0 ====
+*<+-> More powerful personal computing devices enable real-time interaction with Web mapping servers 
+**<+-> ...allowing maps to be generated as mashups from multiple databases  
+*<+-> The advent of Web 2.0 (2005) introduces crowd-sourced geospatial data  
+*<+-> Increased computing power enables client-side manipulation of map features    
+**<+-> ...with cloud storage and servers facilitating authentication and data sharing  
+
+==== Access: open vs closed digital cartography ====
+
+*<+-> A fundamental choice in online content:
+**<+-> Data can be publicly accessible or restricted to private use
+*<+-> The same distinction applies to digital cartography
++<+->{Examples:}
+*<+-> '''Open-source cartography''': OpenStreetMap
+**<+-> Maps are freely available in the public domain
+**<+-> Anyone can contribute by adding features
+**<+-> Maps can be reused without restrictions
+*<+-> '''Freely accessible but proprietary cartography''': Google Maps
+**<+-> Access is provided through a private service
+**<+-> Users can create and overlay their own maps
+*<+-> '''Commercial/private cartography''': Mapbox
+**<+-> Maps are provided as a paid service
+**<+-> Costs scale with usage (e.g., number of views)
+
+==== Fundamental Core Concepts ====
+*<+-> Concepts that '''simplify access''' to geographic data
+*<+-> '''Coordinates''': !Latitude! and !Longitude!
+*<+-> '''Geographic Features''':
+**<+-> !Point! – Defined by a single coordinate pair
+**<+-> !Segment! – A straight line connecting two points
+**<+-> !Line! – A sequence of connected segments
+**<+-> !Area! – A closed shape formed by a continuous line
+*<+-> '''Data Models''':
+**<+-> !Vector! Model – A collection of features with attributes
+**<+-> !Raster! Model – A grid of !cells! storing attributes
+***<+-> Often derived from graphic formats like JPEG 
+*<+-> '''Additional Core Elements''':
+**<+-> !Attributes! – Data linked to features and cells
+**<+-> !Layers! – Organized sets of maps for structured visualization
+*<+-> A suite of tools supports the manipulation and visualization of these concepts
+*<+-> Those that '''simplify access'''
+
+==== Geographic Coordinate Systems ====
+  
+*<+-> A Geographic Coordinate System (GCS) defines how a point is represented on the Earth's surface
+*<+-> A standard GCS plays a crucial role in sharing meaningful information about positions, paths, and distances
+*<+-> The standard evolves over time to accommodate changing needs and advances in technology 
+**<+-> Originally, latitude was computed based on the maximum duration of daylight
+
+==== World Geodetic System of 1984 ====
+
+*<+-> A widely adopted Geographic Coordinate System (GCS) today is \texttt{WGS84} (World Geodetic System 1984)
+*<+-> The label \texttt{EPSG:4326} refers to its "non-projected" version
+**<+-> For example, \texttt{EPSG:3856} represents its Pseudo-Mercator projection on a square surface
+*<+-> \texttt{WGS84 EPSG4326} is used by the Global Positioning System (GPS) and for data storage formats such as GeoJSON
+*<+-> \texttt{WGS84 EPSG3856} is used by Google Maps and computer visualization tools
+*<+-> Key features of \texttt{WGS84 EPSG4326}:
+**<+-> Coordinates are expressed in latitude (north) and longitude (east) (in this order)
+**<+-> Coordinates are expressed in degrees (decimal format)
+
+==== Storing a digital map ====
+
+*<+-> A digital map usually includes:
+**<+-> raster tiles as a visual background
+**<+-> a collection of vector features
+
+*<+-> Raster tiles are available from various providers like OpenStreetMap (free) or Mapbox (paid)
+
+*<+-> Tiles are accessed by specifying the zoom level and the tile's position in a grid
+**<+-> e.g.: @http://tile.openstreetmap.org/<zoom>/<x>/<y>.png@
+**<+-> try @https://tile.openstreetmap.org/7/67/46.png@
+
+*<+-> Vector features are stored in a database, with tools for searching and updating similar to those in conventional databases
+
+*<+-> As with traditional databases, you can choose between relational and non-relational models
+
+==== PostGIS: a relational GIS database ====
+
+*<+-> A sample query that creates a new feature:
+<[code] [style = sql]
+INSERT INTO places (name, coord)
+    VALUES ('Pisa', ST_GeographyFromText('SRID=4326;POINT(10.41 43.72)'));
+[code]>
+
+*<+-> Legend:
+**<+-> !places! is a table created beforehand
+**<+-> It contains two columns: one for the !name! of a place and one for its !coordinates!
+**<+-> The !INSERT! command adds a new row to the table
+**<+-> The new point is named ''Pisa''
+**<+-> Coordinates are provided using the !ST\_GeographyFromText! function from PostGIS
+**<+-> The input string includes an SRID to define the !coordinate system!
+**<+-> @4326@ refers to the @WGS 84@ standard (EPSG:4326)
+**<+-> Coordinates follow the format: !longitude! first, then !latitude! — note the order is reversed from common @WGS 84@ descriptions
+
+==== GeoJSON: maps as JavaScript objects ====
+*<+-> GeoJSON is a GIS extension of the JSON object description language
+*<+-> A @map\_layer@ variable hosting a collection of features is initialized as
+<[code] [style = javascript]
+map_layer = { "type": "FeatureCollection",
+              "features": \[\] }
+[code]>
+
+*<+-> A new point feature is defined with
+<[code] [style = javascript]
+new_feature = { "type": "Feature",
+                "properties": {"name":"Pisa"},
+                "geometry": {"type": "Point", "coordinates": \[ 10.41, 43.72 \] } }
+[code]>
+
+*<+-> And the JavaScript statement to insert the new feature in the empty collection is:
+<[code] [style = javascript]
+map_layer\["features"\].append(new_feature)
+[code]>
+
+==== GeoJSON and noSQL databases ====
+
+*<+-> The previous example refers to variables in the scope of a Javascript program
+*<+-> Using a noSQL database service, the service provides an API based on JavaScript objects
+*<+-> The following snippet connects to a MongoDB server, selects a collection and inserts a new feature
+<[code] [style = javascript]
+client = MongoClient("mongodb://localhost:27017") # Connect to DB
+db = client\["gis_database"\] # Select a database
+collection = db\["map_layer"\] # Select a collection
+# insert the feature
+collection.insert_one(
+  { "type": "Feature",
+    "properties": {"name":"Pisa"},
+    "geometry": {"type": "Point", "coordinates": \[ 10.41, 43.72 \] } } )
+[code]>
+*<+-> Note: the @insert\_one@ call corresponds to the SQL insert query seen above
+==== Goals ====
+
+*<+-> This tutorial provides the '''fundamental''' skills required to update and create GIS maps
+*<+-> We approach GIS from different perspectives (local, server-based, and cloud)
+*<+-> The tutorial covers the basics of:
+**<+-> Creating new features
+**<+-> Generating new raster layers
+**<+-> Tracking an itinerary using a GPS receiver
+**<+-> Uploading our track to a GIS map
+**<+-> Creating a new GIS service
+
+==== Going deeper ====
+
+The rest of this tutorial is divided into six introductory hands-on sessions:
+
+* Fundamentals of QGIS  
+* Working with OpenStreetMap  
+* Creating Maps with uMap  
+* Using GaiaGPS for Field Data  
+* Georeferencing in QGIS  
+* Introduction to the Leaflet Library
+

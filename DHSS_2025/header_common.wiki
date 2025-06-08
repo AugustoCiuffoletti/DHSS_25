@@ -1,0 +1,39 @@
+usepackage=[italian]{babel}
+usepackage=[utf8x]{inputenc}
+usepackage={graphicx}
+usepackage={wasysym}
+usepackage={tikz}
+usepackage={hyperref}
+hypersetup={colorlinks=true,urlcolor=blue}
+% Queste servono a usare un font piccolo per \tt
+usepackage=[scaled=0.7]{beramono}
+usepackage=[T1]{fontenc}
+renewcommand={\ttdefault}{fvm}
+% Questo è il font usato di solito (sans serif)
+renewcommand={\sfdefault}{phv} %phv=helvetica ptm=times
+renewcommand={\rmdefault}{ptm}
+newcommand={\repo}[1]{\href{https://bitbucket.org/labreti/#1.git}{\tt{#1}}}
+
+date={\today}
+% date={25 ottobre 2016}
+subtitle={Summer School on Digital Humanities\\{\small Course material available at https://github.com/AugustoCiuffoletti/DHSS\_2025}}
+author={Augusto Ciuffoletti}
+titleframe=True
+
+
+usepackage={listings}
+lstdefinestyle={generic}{
+basicstyle=\ttfamily\footnotesize,keywordstyle=\ttfamily\bfseries,commentstyle=\rmfamily\itshape,stringstyle=\ttfamily\itshape,columns=fullflexible,keepspaces=true,showspaces=false,showstringspaces=false,showtabs=false,belowskip=0pt,aboveskip=5pt}
+lstdefinestyle={java}{
+style=generic, language=java, frame=single}
+lstdefinestyle={bash}{
+basicstyle=\ttfamily,language=html,keywordstyle=\ttfamily\bfseries,commentstyle=\ttfamily\itshape,columns=fullflexible, keepspaces=true, showspaces=false, showstringspaces=false, showtabs=false, frame=leftline, belowskip=0pt,aboveskip=5pt}
+lstdefinestyle={python}{style=generic,language=python,frame=TB}
+lstdefinestyle={html}{
+basicstyle=\ttfamily\scriptsize,language=html,stringstyle=\color{green},keywordstyle=\color{blue},commentstyle=\color{red},columns=fullflexible, keepspaces=true, showspaces=false, showstringspaces=false, showtabs=false, belowskip=0pt,aboveskip=0pt,frame=single}
+lstdefinestyle={javascript}{basicstyle=\ttfamily\scriptsize, language=java, keywordstyle=\ttfamily\bfseries,frame=single}
+lstdefinestyle={sql}{basicstyle=\ttfamily\scriptsize, language=sql, keywordstyle=\ttfamily\bfseries,frame=single}
+
+
+usebackgroundtemplate={\tikz \node[opacity=0.10] at (current page.east) {\includegraphics[width=\paperwidth]{../images/T_and_O_map_Guntherus_Ziner_1472_lT.jpg}};}
+

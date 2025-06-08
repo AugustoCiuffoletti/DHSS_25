@@ -1,0 +1,104 @@
+==== On the field: Gaia GPS ====
+
+\centering
+{\includegraphics[width=0.6\textwidth]{../images/onfield.pdf}}
+
+*<+-> The system now includes a user on the field
+**<+-> as well as autonomous devices like drones
+*<+-> Gaia GPS is one of the many useful apps for field GIS
+**<+-> ...and one of the few available on both Android and iPhone
+
+==== Using the Gaia GPS App ====
+*<+-> Register to the service (use a free account for practice)
+*<+-> Key activities:
+**<+-> Record a live track of an itinerary (!line! feature)
+**<+-> Record waypoints (!point! features)
+**<+-> Add written annotations (as point !attributes!)
+**<+-> Attach pictures to points (as point !attributes!)
+*<+-> Gaia GPS supports all these activities
+*<+-> Features can be exported as GPX, KMZ, or CSV local files
+**<+-> or shared with users through socials
+*<+-> A companion Web service assists in processing features
+**<+-> here GeoJSON export is also available
+*<+-> Features can be imported too
+
+==== Import a sample map ====
+*<+-> On your smartphone, use the QRcode to reach the course material:
+\begin{center}
+<<<../images/GD_QRcode.jpg, scale=0.5>>>
+\end{center}
+*<+-> Enter the GPX folder, and tap the file "PisaPonteDiMezzo.gpx"
+*<+-> Select to "Open with" the GaiaGPS App
+*<+-> The map is going to be used in the next steps
+
+==== Gaia GPS: the ''main'' screen ====
+\begin{center}
+<<<../images/GaiaGPS.png, scale=0.30>>>
+\end{center}
+
+==== Processing the track on the Web service ====
+*<+-> Sharing your GPX via !GaiaGPS cloud storage! allows easy track viewing on a computer
+*<+-> Access the service at \url{https://www.gaiagps.com/} with your Gaia GPS credentials
+*<+-> Browse your profile to select a track
+*<+-> Click on a track to view its map and update details
+
+==== Gaia GPS Web Service ====
+\begin{center}
+<<<../images/GaiaWeb.png, width=\textwidth>>>
+\end{center}
+
+==== Downloading the data to a PC ====
+*<+-> In the left toolbar, select ''Saved Items''
+*<+-> Click on the feature to export
+*<+-> Scroll the feature frame to find the ''Export'' menu
+*<+-> Choose an export format from the list
+*<+-> Save the file to your computer
+\begin{center}
+<<<../images/GaiaWeb_export.png, width=0.7\textwidth>>>
+\end{center}
+
+==== Import a Gaia GPS track into QGIS ====
+*<+-> After downloading the track to your PC:
+**<+-> Open QGIS and create a new project
+**<+-> Using the Data Source Manager add an OpenStreetMap layer 
+**<+-> Layer -> Add layer -> Add vector and navigate to your GPX
+**<+-> Add, select all, OK, and close the form
+\begin{center}
+<<<../images/GaiaGPS_qgis.png, width=0.7\textwidth>>>
+\end{center}
+
+==== Import a Gaia GPS track into uMap ====
+*<+-> After downloading the sample track on your PC:
+**<+-> Access the uMap Web service and create a new map
+** Press the import button on the right \includegraphics[height=\baselineskip]{../images/uMap_import.png}
+**<+-> Locate and select your GPX file
+\begin{center}
+<<<../images/GaiaGPS_umap.png, width=0.9\textwidth>>>
+\end{center}
+
+==== Recording a track with Gaia GPS ====
+*<+-> Select "Map" view with the bottom bar
+*<+-> Center map at your position with the a button in the left corner toolbar
+*<+-> Start recording with the top/left red button
+**<+-> Running time is displayed
+*<+-> While walking, record waypoints and take pictures using the !+! button
+**<+-> Add notes to waypoints
+**<+-> Associate pictures with waypoints
+*<+-> Tap on the running time to stop and save
+*<+-> Access saved tracks via the !Saved! button
+**<+-> Left screen in figure
+*<+-> Tap a feature to export it in GPX, KML, or CSV format
+*<+-> The track is now available through the GaiaGPS Web Service seen above
+
+==== Track your walk: a Gaia GPS '' 'challenge' '' !! ====
+* Select a nearby point of interest (bridge, pub, or tower)
+* Start track recording in Gaia GPS
+* Walk to your destination, capturing photos and annotating points of interest in the app
+* Upon returning, visit the Gaia GPS website and download your track as a GPX file
+* Import your track into a new uMap project and/or
+* Add it to the shared map at \url{https://umap.openstreetmap.fr/it/map/dhss_2025_616270}
+* Include your photos in the waypoint descriptions:
+** Use the image link found on the GaiaGPS Web Site
+** Select a waypoint with an image
+** Scroll down and "Open Details Page"
+** Click on the image and right click again to select "Copy image link"

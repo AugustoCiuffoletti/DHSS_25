@@ -1,0 +1,135 @@
+==== Example of a Local Application: QGIS ====
+
+*<+-> The user installs a GIS application on the PC
+\centering
+{\includegraphics[width=0.13\textwidth]{../images/localTool.pdf}}
+*<+-> In this scenario, the Web is a tool for exchanging data
+**<+-> but it is not directly involved
+*<+-> Quantum GIS (QGIS) is an open-source GIS application
+**<+-> Developed and maintained by volunteers
+**<+-> First released in 2002
+**<+-> Here we use version 3.42.0 (Münster)
+*<+-> Runs on Windows, Linux, and macOS
+
+==== QGIS Operation ====
+
+*<+-> Acquires and aggregates layers from various formats
+**<+-> Includes both local data and remote databases
+*<+-> Enables creation of new layers
+**<+-> Populated with customized features
+*<+-> Among final output options:
+**<+-> Produce a !graphic file! (JPG, PNG, etc.)
+**<+-> !Save! in QGIS format
+**<+-> !Publish! the map
+*<+-> And much more...
+
+==== Step-by-Step QGIS Tutorial - Load a raster ====
+
++<+->{Create a New Project}
+*<+-> Open QGIS and select Project -> New
++<+->{Add a Raster Background Layer}
+*<+-> !Layer! -> !Data Source Manager! -> !XYZ Tiles!
+**<+-> You can also use the !Ctrl-L! instead of using the menu
+*<+-> Double-click on !OpenStreetMap!
+*<+-> Use the control pad to zoom in on a specific region
++<+->{Understanding the Raster Layer}  
+*<+-> The map is now displayed as a !raster! layer  
+**<+-> Composed of multiple !tiles!, similar to an image  
+**<+-> Cannot be modified within QGIS  
+*<+-> Various providers offer raster layers  
+**<+-> ''OpenStreetMap'' is a free, open-source provider  
+**<+-> Anyone can propose updates
+
+==== Step-by-Step QGIS Tutorial - Add a Vector Layer ====
+
++<+->{Define a Vector Layer}
+*<+-> !Layer! -> !Create Layer! -> !New Shapefile Layer!
+**<+-> Or use the ''New Shapefile'' icon in the toolbar (third icon in the second row)
+*<+-> Choose:
+**<+-> A filename to save the layer (e.g., Demo)
+**<+-> The feature type: ''Point'', ''Multipoint'', ''Line'', ''Polygon''
+***<+-> In this example, use ''Point''
+**<+-> A coordinate system (@EPSG:4326 WGS84@)
+*<+-> Add new fields for the features in the layer
+**<+-> e.g. ''Last visit'' with type ''Date'' and click ''Add to Fields List''
+**<+-> When finished, click !Ok!
+*<+-> The new layer appears in the {\em Layers Panel}
+**<+-> To view the layers panel, !View! -> !Panels! and tick !Layers!
+*<+-> Two layers shown, Demo and OpenStreetMap
+*<+-> We can edit the Demo vector layer
+
+==== Step-by-Step QGIS Tutorial - Refine the layer definition ====
+
++<+->{Further Configuration of a Layer}
+*<+-> Double-click on the !Demo! layer to set its properties
+**<+-> In ''Symbology'', choose the graphic symbol and adjust its properties
+**<+-> In ''Fields'', update feature attributes (you may want to add a ''name'' field'
+**<+-> In ''Labels'', select ''Single label'' and choose the field for labeling the points (e.g., select the ''name'' field)
+
+==== Step-by-Step QGIS Tutorial - Working with points ====
+
++<+->{Populate a Vector Layer (with Points)}
+*<+-> Select the !Demo! layer and !Layer! -> !Toggle editing!
+**<+-> Or the pencil in the second toolbar
+*<+-> Then select !Edit! -> !Add Point feature!
+**<+-> or the @Ctrl+.@ shortcut
+**<+-> The mouse pointer changes to a crosshair
+*<+-> Click on the map to add a new point
+**<+-> A box appears to set feature fields
+*<+-> Repeat as you like
+*<+-> To move a point feature, 
+**<+-> menu !Edit! -> !Edit geometry! -> !Move Feature!
+**<+-> right click on the point to move
+**<+-> drag to the new position
+**<+-> left click to displace the selected point
+*<+-> To exit edit mode, right-click on the !Demo! layer and select !Layer! -> !Toggle Editing!
+
+==== Step-by-Step QGIS Tutorial - Edit fields ====
+
++<+->{Update Feature Attributes}
+*<+-> Right-click on the !Demo! layer and select !Open Attribute Table!
+**<+-> Use the bottom-right icons to adjust the view style
+*<+-> Press @Ctrl+E@ to enable table editing (or click the ''Pencil'' icon)
+*<+-> Modify attribute values as needed
+*<+-> Press @Ctrl+S@ to save
++<+->{Add an Attribute ("desc") to the Features}
+*<+-> Right-click on the !Demo! layer and select !Open Attribute Table!
+**<+-> Enable editing
+**<+-> Press @Ctrl+W@ to add a new field (or find the "New Field" button in the toolbar)
+**<+-> Set the name and type (e.g., "desc" of type Text)
+**<+-> Click !OK!
+
+==== Step-by-Step QGIS Tutorial - Process fields ====
+
++<+->{Compute Fields with Point Coordinates}
+*<+-> Select a layer and click the ''Open Attribute Table'' button in the toolbar
+*<+-> Click @CTRL+I@ or the abacus icon in the attribute table window
+*<+-> De-select ''Only update 1 selected feature''
+*<+-> Input a name for the new field (e.g., ''Lat'')
+*<+-> Choose a type for the field (e.g., ''Decimal Number'')
+*<+-> Enter the formula ''y(\$geometry)'' in the ''Expression'' box
+**<+-> Find help in the list near the !Expression! box in the "Geometry" drop-down list
+**<+-> Ignore the warning about ''not adding the field to the provider''
+*<+-> Create another field for longitude (e.g., ''Long'') using ''x(\$geometry)''
+
+==== Step-by-Step QGIS Tutorial - 7 ====
+
++<+->{Save Your Work}
+*<+-> Save the project in QGIS native format (Ctrl+S or !Project! -> !Save!)
+*<+-> Export as an image (!Project! -> !Import/Export! -> !Export Map to Image!)
+*<+-> Export in a portable vector format (!Project! -> !Export DXF!)
+
+==== GUI Toolbar Icons (Quick Reference) ====
+
+<[nowiki]
+\centering
+{\includegraphics[width=\textwidth]{../images/qgis_synopsis.png}}
+[nowiki]>
+
+==== Lab Activity ====
+
+* (Basic) North of La Spezia, there is a region called "Cinque Terre". The name comes from five fishing villages: Corniglia, Manarola, Vernazza, Monterosso, and Riomaggiore. Set a Point for each village and display a label with its name on the map.
+* (Intermediate) Draw a sea route visiting all the villages, starting from Levanto (another small town to the north). For this create a new LineString vector, enable editing and mark waypoints with the left button. Right button to close the line.
+* (Intermediate) Convert the line to a new layer of vertices using !Vector! -> !Geometry Tools! -> !Extract Vertices!
+* (Advanced) Compute the longitude and latitude of these points, and label each one with a string "(long, lat)" using the !concat! function in the calculator.
+

@@ -1,0 +1,149 @@
+==== Sharing Maps: The GIS Cloud ====
+
+*<+-> OpenStreetMap (OSM) does not support adding custom layers
+**<+-> It lacks infrastructure for proprietary data storage
+*<+-> Desktop GIS applications (e.g., QGIS) allow users to overlay OSM data with their own layers
+*<+-> Alternative services provide infrastructure for collaborative map sharing
+
+<[nowiki]
+\centering
+\visible<+->{\includegraphics[width=0.25\textwidth]{../images/mapserver.pdf}}
+[nowiki]>
+
+*<+-> In these services, the server acts as an intermediary between users and data storage
+*<+-> Unlike OSM, access and sharing restrictions can be enforced
+
+==== The uMap Service ====
+*<+-> A stable project (launched in 2014)
+*<+-> Open-source (can be installed on a private server)
+*<+-> Uses OpenStreetMap as a base raster layer
+*<+-> Users can:
+**<+-> Import and display vector layers in standard formats
+**<+-> Connect to external databases
+**<+-> Create new layers stored within the uMap infrastructure
+*<+-> Supports ''popup'' annotations with:
+**<+-> Text, images, and web links
+*<+-> Maps can be shared and collaboratively edited by a restricted user group
+
+==== A uMap Tour (Sect. 5 in the Booklet) ====
+*<+-> Open a browser and visit \url{https://umap.openstreetmap.fr}
+*<+-> Log in using OpenStreetMap credentials (or via Bitbucket, or GitHub)
+**<+-> It is also possible to explore uMap !without! an account (with limited functionality)
+*<+-> Click "Create a map"
+**<+-> An OpenStreetMap raster background will appear
+
+==== Editing Your Shared Map ====
+
+*<+-> Upon map creation, you are in !Edit Mode!
+**<+-> To exit, click the blue !Save draft! button, then !View!
+**<+-> To re-enter edit mode, click the pencil icon !Edit! in the top-right corner
+*<+-> Two toolboxes appear on the right:
+**<+-> Upper box: feature creation tool
+**<+-> Lower box: map management tools
+<[nowiki]
+\item \visible<+->{On the left panel, click \includegraphics[height=\baselineskip]{../images/uMap_cerca.png} to search for a town (e.g., ''Pisa'')}
+[nowiki]>
+*<+-> If town names are displayed in French, switch the raster layer:
+<[nowiki]
+\begin{itemize}
+\item \visible<+->{Click \includegraphics[height=\baselineskip]{../images/uMap_CambiaLivelloSfondo.png} and select "OpenStreetMap"}
+\end{itemize}
+[nowiki]>
+
+==== Adding a Feature ====
+
+*<+-> Choose a feature type from the right-hand menu:
+<[nowiki]
+\begin{itemize}
+\item \visible<+->{\includegraphics[height=\baselineskip]{../images/uMap_poi.png} Point}
+\item \visible<+->{\includegraphics[height=\baselineskip]{../images/uMap_line.png} Line}
+\item \visible<+->{\includegraphics[height=\baselineskip]{../images/uMap_area.png} Area}
+\end{itemize}
+[nowiki]>
+*<+-> Click on the desired feature type, then interact with the map:
+**<+-> A single click places a point
+**<+-> Multiple clicks define a line or area
+**<+-> A double-click ends the line or closes the area
+*<+-> Once the feature is created, a form appears:
+**<+-> Enter the ''name'' and ''description'' of the feature
+**<+-> Explore additional customization options
+*<+-> To edit an existing feature, click it and select the pencil icon
+**<+-> Click the question mark near ''Description'' for formatting tips
+
+==== Special Content in the '''Description''' Field ====
+
+The ''Description'' field can contain interactive elements:\\
+{\scriptsize (Note: these appear only after !Save! and !Disable Editing!)}
+
+*<+-> Add an image by inserting its link within double braces:
+<[code] [basicstyle=\ttfamily\small,belowskip=-0.5\baselineskip]
+      {{http://gardenersnet.com/flower/pics/daffodil04.jpg}}
+[code]>
+*<+-> Add a hyperlink using double brackets:
+<[code] [basicstyle=\ttfamily\small,belowskip=-0.5\baselineskip]
+      \[\[http://www.google.com]]
+[code]>
+*<+-> Embed a video (e.g., YouTube) using triple braces:
+<[code] [basicstyle=\ttfamily\small,belowskip=-0.5\baselineskip]
+      {{{https://player.vimeo.com/video/56810854}}}
+[code]>
+
+==== Creating a Slideshow ====
+
+*<+-> A slideshow cycles through the map features sequentially
+**<+-> Features are displayed in the order they were added
+*<+-> To enable the slideshow:
+**<+-> Click the {\includegraphics[height=\baselineskip]{../images/uMap_Gear.png} gear} icon and select ''Slideshow''
+**<+-> Enable ''Slideshow mode''
+**<+-> Set the time interval between slides
+**<+-> Optionally, enable auto-play on map load
+**<+-> Click !Save!
+*<+-> Familiar playback controls ("Play," "Pause," "Next," "Previous") appear in the bottom right corner
+*<+-> If auto-play is enabled, the slideshow starts automatically upon loading the map
+*<+-> Reordering features is not possible, but you can export them to QGIS, reorder, and reimport them into uMap
+
+==== How to Share, Embed, and Export ====
+
++<+->{To share your map with specific users or the public}
+<[nowiki]
+\begin{itemize}
+\item \visible<+->{Click \includegraphics[height=\baselineskip]{../images/uMap_accesso.png} (right panel)}
+\item \visible<+->{Adjust editor permissions and visibility settings}
+\end{itemize}
+[nowiki]>
++<+->{To embed your map in a webpage}
+<[nowiki]
+\begin{itemize}
+\item \visible<+->{Click \includegraphics[height=\baselineskip]{../images/uMap_share.png} (left panel)}
+\item \visible<+->{Generate a short URL (useful for mobile access)}
+\item \visible<+->{Export features in various formats}
+\begin{itemize}
+\item \visible<+->{GeoJSON – JavaScript-compatible format}
+\item \visible<+->{KMZ – Google Maps format}
+\item \visible<+->{GPX – GPS-compatible format}
+\end{itemize}
+\item \visible<+->{Copy the embed code (''iframe'' tag) for use in web pages}
+\item \visible<+->{Configure a custom URL with query}
+\end{itemize}
+[nowiki]>
+
+==== Time for a uMap ''Challenge''! (Step 1) ====
+
++<+-> {Geolocate Yourself}
+
+*<+-> Open \url{https://umap.openstreetmap.fr/it/map/dhss_2025_616270}
+*<+-> Add a ''point'' feature at a location you like (e.g., your town, favorite hike, birthplace)
+*<+-> Enter your nickname in the ''Description'' field
+*<+-> Save the point as a visible feature
+*<+-> !Warning!: the map is public: avoid personal data
+
+==== Time for a uMap ''Challenge''!! (Step 2) ====
+
++<+-> {The Map to the Tower}
+
+*<+-> Help a friend visiting Pisa for the first time:
+**<+-> Add points of interest (leaning tower, train station, whatever...)
+***<+-> Fill "Description" fields as you like (try with an image of the tower, \texttt{\{\{https://images.app.goo.gl/SWAQCqGn6peVnwH29\}\}})
+**<+-> Create a map showing a route from the train station to the Leaning Tower
+***<+-> Draw a path from the station to an imaginary bus stop, then the bus route, and finally the walk to the tower
+***<+-> At the bus stop, enter details: bus number, direction, stop name, and estimated travel time

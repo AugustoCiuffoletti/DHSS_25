@@ -1,0 +1,11 @@
+% Per favore non toccare il latex! Per modificare le trasparenze modifica 
+% il file in formato wiki, poi compilalo con wiki2beamer e pdflatex.
+% Ho scritto il comando compile.sh che esegue i due semplici passi
+
+<[autotemplate]
+documentclass=[handout]{beamer}
+usetheme={Singapore}
+title={TITLE}
+
+>>>../header_common.wiki<<<
+[autotemplate]>

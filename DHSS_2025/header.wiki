@@ -1,0 +1,17 @@
+% Per favore non toccare il latex! Per modificare le trasparenze modifica 
+% il file in formato wiki, poi compilalo con wiki2beamer e pdflatex.
+% Ho scritto il comando compile.sh che esegue i due semplici passi
+
+<[autotemplate]
+% NON USARE I COLORI: non seguono le animazioni!
+documentclass={beamer}
+usetheme={CambridgeUS}
+
+% makeatletter
+setbeamertemplate={footline}{\leavevmode \hbox{\begin{beamercolorbox}[wd=.3\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot} \usebeamerfont{author in head/foot} Augusto Ciuffoletti \end{beamercolorbox} \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=1ex,left]{title in head/foot} \usebeamerfont{title in head/foot} Course material available from course site: https://bit.ly/dt4h-gis \end{beamercolorbox}} \vskip0pt }
+% makeatother
+
+setbeamercovered={highly dynamic}
+title={TITLE}
+>>>../header_common.wiki<<<
+[autotemplate]>

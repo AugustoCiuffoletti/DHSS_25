@@ -1,0 +1,13 @@
+% Per favore non toccare il latex! Per modificare le trasparenze modifica 
+% il file in formato wiki, poi compilalo con wiki2beamer e pdflatex.
+% Ho scritto il comando compile.sh che esegue i due semplici passi
+
+<[autotemplate]
+documentclass=[handout]{beamer}
+usetheme={Singapore}
+%Questa serve ad avere 2 pagine in una
+usepackage={pgfpages}
+pgfpagesuselayout={2 on 1}[a4paper,border shrink=5mm]
+title={TITLE}
+>>>../header_common.wiki<<<
+[autotemplate]>
