@@ -1,4 +1,4 @@
-==== Example of a Local Application: QGIS ====
+==== QGIS: a local application ====
 
 *<+-> The user installs a GIS application on the PC
 \centering
@@ -8,7 +8,7 @@
 *<+-> Quantum GIS (QGIS) is an open-source GIS application
 **<+-> Developed and maintained by volunteers
 **<+-> First released in 2002
-**<+-> Here we use version 3.42.0 (Münster)
+**<+-> Here we use version 3.34 (Prizren)
 *<+-> Runs on Windows, Linux, and macOS
 
 ==== QGIS Operation ====
@@ -20,8 +20,7 @@
 *<+-> Among final output options:
 **<+-> Produce a !graphic file! (JPG, PNG, etc.)
 **<+-> !Save! in QGIS format
-**<+-> !Publish! the map
-*<+-> And much more...
+**<+-> !Publish! on the ''QGIS Cloud'' (plugin needed)
 
 ==== Step-by-Step QGIS Tutorial - Load a raster ====
 
@@ -37,8 +36,7 @@
 **<+-> Composed of multiple !tiles!, similar to an image  
 **<+-> Cannot be modified within QGIS  
 *<+-> Various providers offer raster layers  
-**<+-> ''OpenStreetMap'' is a free, open-source provider  
-**<+-> Anyone can propose updates
+**<+-> ''OpenStreetMap'' is a free, open-source provider
 
 ==== Step-by-Step QGIS Tutorial - Add a Vector Layer ====
 
@@ -63,7 +61,9 @@
 +<+->{Further Configuration of a Layer}
 *<+-> Double-click on the !Demo! layer to set its properties
 **<+-> In ''Symbology'', choose the graphic symbol and adjust its properties
-**<+-> In ''Fields'', update feature attributes (you may want to add a ''name'' field'
+**<+-> In ''Fields'', update feature attributes
+***<+-> you may want to add a new ''las t visit'' field
+***<+-> for this enable editing with the pencil and add (or delete) a field
 **<+-> In ''Labels'', select ''Single label'' and choose the field for labeling the points (e.g., select the ''name'' field)
 
 ==== Step-by-Step QGIS Tutorial - Working with points ====
@@ -101,18 +101,21 @@
 
 ==== Step-by-Step QGIS Tutorial - Process fields ====
 
-+<+->{Compute Fields with Point Coordinates}
-*<+-> Select a layer and click the ''Open Attribute Table'' button in the toolbar
++<+->{For each point compute a new field with distance from Rome in degrees}
+*<+-> Select a layer and click the !Open Attribute Table! button in the toolbar
 *<+-> Click @CTRL+I@ or the abacus icon in the attribute table window
-*<+-> De-select ''Only update 1 selected feature''
 *<+-> Input a name for the new field (e.g., ''Lat'')
 *<+-> Choose a type for the field (e.g., ''Decimal Number'')
-*<+-> Enter the formula ''y(\$geometry)'' in the ''Expression'' box
-**<+-> Find help in the list near the !Expression! box in the "Geometry" drop-down list
-**<+-> Ignore the warning about ''not adding the field to the provider''
-*<+-> Create another field for longitude (e.g., ''Long'') using ''x(\$geometry)''
+*<+-> Enter the following formula in the ''Expression'' box
+<[code][style=javascript]
+distance(@geometry, make_point(12.5, 41.9))
+[code]>
+*<+-> The @distance@ function takes two points
+**<+-> @\@geometry@ is the one corresponding to the row in the table
+**<+-> @make\_point(12.5, 41.9)@ corresponds to Rome (long,lat)
+*<+-> Note: to see meters conversion is needed, from @EPSG:4326@ to @EPSG:3857@, using the @transform@ function
 
-==== Step-by-Step QGIS Tutorial - 7 ====
+==== Step-by-Step QGIS Tutorial - Save or export ====
 
 +<+->{Save Your Work}
 *<+-> Save the project in QGIS native format (Ctrl+S or !Project! -> !Save!)
@@ -129,7 +132,7 @@
 ==== Lab Activity ====
 
 * (Basic) North of La Spezia, there is a region called "Cinque Terre". The name comes from five fishing villages: Corniglia, Manarola, Vernazza, Monterosso, and Riomaggiore. Set a Point for each village and display a label with its name on the map.
-* (Intermediate) Draw a sea route visiting all the villages, starting from Levanto (another small town to the north). For this create a new LineString vector, enable editing and mark waypoints with the left button. Right button to close the line.
+* (Intermediate) Draw a sea route visiting all the villages, starting from Levanto (another small town to the north). For this create a new LineString vector, enable editing, select @Add Linear Element@ and mark waypoints with the left button. Right button to close the LineString.
 * (Intermediate) Convert the line to a new layer of vertices using !Vector! -> !Geometry Tools! -> !Extract Vertices!
 * (Advanced) Compute the longitude and latitude of these points, and label each one with a string "(long, lat)" using the !concat! function in the calculator.
 

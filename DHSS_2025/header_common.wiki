@@ -16,7 +16,7 @@ newcommand={\repo}[1]{\href{https://bitbucket.org/labreti/#1.git}{\tt{#1}}}
 
 date={\today}
 % date={25 ottobre 2016}
-subtitle={Summer School on Digital Humanities\\{\small Course material available at https://github.com/AugustoCiuffoletti/DHSS\_2025}}
+subtitle={Summer School on Digital Humanities\\{\small Web site: \url{https://bit.ly/dt4h-gis}}}
 author={Augusto Ciuffoletti}
 titleframe=True
 

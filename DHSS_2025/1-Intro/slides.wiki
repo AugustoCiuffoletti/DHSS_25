@@ -1,6 +1,13 @@
-
-
 == The many ways of GIS for digital humanities ==
+
+==== Plan of the Tutorial ====
+*<+-> The tutorial is divided into seven sessions.
+*<+-> The first session is lecture-style, introducing basic concepts, terminology, and background.
+*<+-> Each of the following six sessions focuses on a specific tool or concept and includes hands-on exercises:
+**<+-> QGIS, OpenStreetMap, UMap, GaiaGPS, Georeferencing with QGIS, and Leaflet.
+*<+-> Only minimal prior experience is expected, so everyone can participate.
+*<+-> All learning materials are available online, so you can revisit and try exercises at home if needed.
+*<+-> You can keep the slides on your phone and practice on your PC
 
 ==== What is digital cartography (aka GIS) ====
 *<+-> Digital cartography shares fundamental principles with classical cartography:
@@ -118,10 +125,9 @@
 **<+-> !Attributes! – Data linked to features and cells
 **<+-> !Layers! – Organized sets of maps for structured visualization
 *<+-> A suite of tools supports the manipulation and visualization of these concepts
-*<+-> Those that '''simplify access'''
 
 ==== Geographic Coordinate Systems ====
-  
+*<+-> '''Harmonizing representation''' requires the existence of standards for data models
 *<+-> A Geographic Coordinate System (GCS) defines how a point is represented on the Earth's surface
 *<+-> A standard GCS plays a crucial role in sharing meaningful information about positions, paths, and distances
 *<+-> The standard evolves over time to accommodate changing needs and advances in technology 
@@ -144,13 +150,13 @@
 **<+-> raster tiles as a visual background
 **<+-> a collection of vector features
 
-*<+-> Raster tiles are available from various providers like OpenStreetMap (free) or Mapbox (paid)
+*<+-> '''Raster tiles''' are available from various providers like OpenStreetMap (free) or Mapbox (paid)
 
 *<+-> Tiles are accessed by specifying the zoom level and the tile's position in a grid
 **<+-> e.g.: @http://tile.openstreetmap.org/<zoom>/<x>/<y>.png@
 **<+-> try @https://tile.openstreetmap.org/7/67/46.png@
 
-*<+-> Vector features are stored in a database, with tools for searching and updating similar to those in conventional databases
+*<+-> '''Vector features''' are stored in a database, with tools for searching and updating similar to those in conventional databases
 
 *<+-> As with traditional databases, you can choose between relational and non-relational models
 
@@ -170,7 +176,7 @@ INSERT INTO places (name, coord)
 **<+-> Coordinates are provided using the !ST\_GeographyFromText! function from PostGIS
 **<+-> The input string includes an SRID to define the !coordinate system!
 **<+-> @4326@ refers to the @WGS 84@ standard (EPSG:4326)
-**<+-> Coordinates follow the format: !longitude! first, then !latitude! — note the order is reversed from common @WGS 84@ descriptions
+**<+-> Coordinates follow the format: !longitude! first, then !latitude! — note the order is reversed from @WGS 84@ standard
 
 ==== GeoJSON: maps as JavaScript objects ====
 *<+-> GeoJSON is a GIS extension of the JSON object description language
@@ -207,22 +213,10 @@ collection.insert_one(
     "properties": {"name":"Pisa"},
     "geometry": {"type": "Point", "coordinates": \[ 10.41, 43.72 \] } } )
 [code]>
-*<+-> Note: the @insert\_one@ call corresponds to the SQL insert query seen above
-==== Goals ====
-
-*<+-> This tutorial provides the '''fundamental''' skills required to update and create GIS maps
-*<+-> We approach GIS from different perspectives (local, server-based, and cloud)
-*<+-> The tutorial covers the basics of:
-**<+-> Creating new features
-**<+-> Generating new raster layers
-**<+-> Tracking an itinerary using a GPS receiver
-**<+-> Uploading our track to a GIS map
-**<+-> Creating a new GIS service
+*<+-> Note: the @insert\_one@ call corresponds to the SQL @INSERT@ query seen above
 
 ==== Going deeper ====
-
 The rest of this tutorial is divided into six introductory hands-on sessions:
-
 * Fundamentals of QGIS  
 * Working with OpenStreetMap  
 * Creating Maps with uMap  
