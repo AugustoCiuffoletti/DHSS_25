@@ -16,7 +16,6 @@
 ====Web GIS vs. Desktop GIS Applications====
 *<+-> Compared to a desktop GIS application (like QGIS):
 **<+-> No installation required
-**<+-> No dependency on local computing power
 **<+-> Platform-independent (works on any OS)
 **<+-> Responsive design for different devices (PC, tablet, smartphone)
 **<+-> Designed for sharing—requires access control mechanisms
