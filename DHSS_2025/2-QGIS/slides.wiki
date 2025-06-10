@@ -22,7 +22,7 @@
 **<+-> !Save! in QGIS format
 **<+-> !Publish! on the ''QGIS Cloud'' (plugin needed)
 
-==== Step-by-Step QGIS Tutorial - Load a raster ====
+==== Hands-on QGIS - Load a raster ====
 
 +<+->{Create a New Project}
 *<+-> Open QGIS and select Project -> New
@@ -38,7 +38,7 @@
 *<+-> Various providers offer raster layers  
 **<+-> ''OpenStreetMap'' is a free, open-source provider
 
-==== Step-by-Step QGIS Tutorial - Add a Vector Layer ====
+==== Hands-on QGIS - Add a Vector Layer ====
 
 +<+->{Define a Vector Layer}
 *<+-> !Layer! -> !Create Layer! -> !New Shapefile Layer!
@@ -56,7 +56,7 @@
 *<+-> Two layers shown, Demo and OpenStreetMap
 *<+-> We can edit the Demo vector layer
 
-==== Step-by-Step QGIS Tutorial - Refine the layer definition ====
+==== Hands-on QGIS - Refine the layer definition ====
 
 +<+->{Further Configuration of a Layer}
 *<+-> Double-click on the !Demo! layer to set its properties
@@ -66,7 +66,7 @@
 ***<+-> for this enable editing with the pencil and add (or delete) a field
 **<+-> In ''Labels'', select ''Single label'' and choose the field for labeling the points (e.g., select the ''name'' field)
 
-==== Step-by-Step QGIS Tutorial - Working with points ====
+==== Hands-on QGIS - Working with points ====
 
 +<+->{Populate a Vector Layer (with Points)}
 *<+-> Select the !Demo! layer and !Layer! -> !Toggle editing!
@@ -84,7 +84,7 @@
 **<+-> left click to displace the selected point
 *<+-> To exit edit mode, right-click on the !Demo! layer and select !Layer! -> !Toggle Editing!
 
-==== Step-by-Step QGIS Tutorial - Edit fields ====
+==== Hands-on QGIS - Edit fields ====
 
 +<+->{Update Feature Attributes}
 *<+-> Right-click on the !Demo! layer and select !Open Attribute Table!
@@ -99,7 +99,7 @@
 **<+-> Set the name and type (e.g., "desc" of type Text)
 **<+-> Click !OK!
 
-==== Step-by-Step QGIS Tutorial - Process fields ====
+==== Hands-on QGIS - Process fields ====
 
 +<+->{For each point compute a new field with distance from Rome in degrees}
 *<+-> Select a layer and click the !Open Attribute Table! button in the toolbar
@@ -107,7 +107,7 @@
 *<+-> Input a name for the new field (e.g., ''Lat'')
 *<+-> Choose a type for the field (e.g., ''Decimal Number'')
 *<+-> Enter the following formula in the ''Expression'' box
-<[code][style=javascript]
+<[code][style=javascript]Hands-on QGIS -
 distance(@geometry, make_point(12.5, 41.9))
 [code]>
 *<+-> The @distance@ function takes two points
@@ -115,7 +115,7 @@ distance(@geometry, make_point(12.5, 41.9))
 **<+-> @make\_point(12.5, 41.9)@ corresponds to Rome (long,lat)
 *<+-> Note: to see meters conversion is needed, from @EPSG:4326@ to @EPSG:3857@, using the @transform@ function
 
-==== Step-by-Step QGIS Tutorial - Save or export ====
+==== Hands-on QGIS - Save or export ====
 
 +<+->{Save Your Work}
 *<+-> Save the project in QGIS native format (Ctrl+S or !Project! -> !Save!)
