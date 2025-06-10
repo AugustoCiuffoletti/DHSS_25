@@ -32,7 +32,7 @@
 **<+-> ...and explore ''Leaflet'' in the last session
 
 ====Example of an Open Web Map Service: OpenStreetMap====
-*<+-> The OpenStreetMap server (www.openstreetmap.org) renders a dynamic map in the browser, drawing data from a public database
+*<+-> The OpenStreetMap server (\url{www.openstreetmap.org}) renders a dynamic map in the browser, drawing data from a public database
 
 <[nowiki]
 \centering
