@@ -44,7 +44,7 @@
 **<+-> There is no option for a private workspace
 *<+-> Using the built-in '''Id''' editor:
 **<+-> Easily create features like a bar, swimming pool, or street
-**<+-> '''Save''' changes cautiously—!they become immediately visible to everyone!
+**<+-> '''Save''' changes cautiously—!they might become visible to everyone!
 
 ====Getting Started with OpenStreetMap====
 *<+-> Open a browser and visit OpenStreetMap
