@@ -18,7 +18,7 @@
 **<+-> No installation required
 **<+-> Platform-independent (works on any OS)
 **<+-> Responsive design for different devices (PC, tablet, smartphone)
-**<+-> Designed for sharing—requires access control mechanisms
+**<+-> Designed for sharing — requires access control mechanisms
 *<+-> Developing such a dynamic application requires a specialized JavaScript library
 
 ====Tools for Web Maps: JavaScript Libraries====
@@ -29,6 +29,7 @@
 **<+-> The user downloads a web page (designed by the cartographer)
 **<+-> The page interacts with a PostGIS server and a raster data repository
 *<+-> We will explore OpenStreetMap, which is implemented using the ''Leaflet'' library
+**<+-> ...and explore ''Leaflet'' in the last session
 
 ====Example of an Open Web Map Service: OpenStreetMap====
 *<+-> The OpenStreetMap server (www.openstreetmap.org) renders a dynamic map in the browser, drawing data from a public database
