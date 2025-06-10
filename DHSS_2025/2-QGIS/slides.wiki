@@ -45,7 +45,7 @@
 **<+-> Or use the ''New Shapefile'' icon in the toolbar (third icon in the second row)
 *<+-> Choose:
 **<+-> A filename to save the layer (e.g., Demo)
-**<+-> The feature type: ''Point'', ''Multipoint'', ''Line'', ''Polygon''
+**<+-> The feature type: ''Point'', ''Multipoint'', ''LineString'', ''Polygon''
 ***<+-> In this example, use ''Point''
 **<+-> A coordinate system (@EPSG:4326 WGS84@)
 *<+-> Add new fields for the features in the layer
@@ -62,7 +62,7 @@
 *<+-> Double-click on the !Demo! layer to set its properties
 **<+-> In ''Symbology'', choose the graphic symbol and adjust its properties
 **<+-> In ''Fields'', update feature attributes
-***<+-> you may want to add a new ''las t visit'' field
+***<+-> you may want to add a new ''last visit'' field
 ***<+-> for this enable editing with the pencil and add (or delete) a field
 **<+-> In ''Labels'', select ''Single label'' and choose the field for labeling the points (e.g., select the ''name'' field)
 
