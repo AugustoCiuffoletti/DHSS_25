@@ -53,6 +53,7 @@
 **<+-> '''Register''' a new account
 
 ====Creating a Point Feature in OpenStreetMap====
+*<+-> To start editing press the !Edit! button top left
 *<+-> To add a point feature (!but do not press '''Save'''!):
 **<+-> Zoom in using the trackpad until '''Edit''' is enabled
 **<+-> Select the '''Edit''' option (opens the ''iD'' editor)
@@ -61,7 +62,7 @@
 **<+-> Click on the map to place the point
 **<+-> Choose a feature type (e.g., '''Café''') from the left sidebar
 **<+-> Fill in relevant attributes
-**<+-> Press '''Undo''' (back arrow next to "Save")
+*<+-> To stop editing click the logo icon top left (or reload the page)
 
 ====Additional Editing in OpenStreetMap====
 *<+-> To draw a Line or Area:

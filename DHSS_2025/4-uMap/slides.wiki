@@ -11,17 +11,17 @@
 [nowiki]>
 
 *<+-> In these services, the server acts as an intermediary between users and data storage
-*<+-> Unlike OSM, access and sharing restrictions can be enforced
+*<+-> Unlike OSM, access and sharing restrictions are enforced
 
 ==== The uMap Service ====
 *<+-> A stable project (launched in 2014)
 *<+-> Open-source (can be installed on a private server)
-*<+-> Uses OpenStreetMap as a base raster layer
+*<+-> Uses OpenStreetMap as a background raster layer
 *<+-> Users can:
-**<+-> Import and display vector layers in standard formats
+**<+-> Import and display vector layers
 **<+-> Connect to external databases
-**<+-> Create new layers stored within the uMap infrastructure
-*<+-> Supports ''popup'' annotations with:
+**<+-> Create new maps stored within the uMap infrastructure
+*<+-> Supports ''popup'' feature annotations with:
 **<+-> Text, images, and web links
 *<+-> Maps can be shared and collaboratively edited by a restricted user group
 
@@ -73,7 +73,7 @@
 ==== Special Content in the '''Description''' Field ====
 
 The ''Description'' field can contain interactive elements:\\
-{\scriptsize (Note: these appear only after !Save! and !Disable Editing!)}
+{\scriptsize (Note: these appear only after !Save! and !View!)}
 
 *<+-> Add an image by inserting its link within double braces:
 <[code] [basicstyle=\ttfamily\small,belowskip=-0.5\baselineskip]
@@ -100,11 +100,11 @@ The ''Description'' field can contain interactive elements:\\
 **<+-> Click !Save!
 *<+-> Familiar playback controls ("Play," "Pause," "Next," "Previous") appear in the bottom right corner
 *<+-> If auto-play is enabled, the slideshow starts automatically upon loading the map
-*<+-> Reordering features is not possible, but you can export them to QGIS, reorder, and reimport them into uMap
+*<+-> Not fully functional, but may be useful
 
 ==== How to Share, Embed, and Export ====
 
-+<+->{To share your map with specific users or the public}
++<+->{To share your map with specific users or anyone}
 <[nowiki]
 \begin{itemize}
 \item \visible<+->{Click \includegraphics[height=\baselineskip]{../images/uMap_accesso.png} (right panel)}
@@ -115,12 +115,12 @@ The ''Description'' field can contain interactive elements:\\
 <[nowiki]
 \begin{itemize}
 \item \visible<+->{Click \includegraphics[height=\baselineskip]{../images/uMap_share.png} (left panel)}
-\item \visible<+->{Generate a short URL (useful for mobile access)}
 \item \visible<+->{Export features in various formats}
 \begin{itemize}
 \item \visible<+->{GeoJSON – JavaScript-compatible format}
 \item \visible<+->{KMZ – Google Maps format}
 \item \visible<+->{GPX – GPS-compatible format}
+\item \visible<+->{CSV – spreadsheet compatible format}
 \end{itemize}
 \item \visible<+->{Copy the embed code (''iframe'' tag) for use in web pages}
 \item \visible<+->{Configure a custom URL with query}
@@ -143,7 +143,8 @@ The ''Description'' field can contain interactive elements:\\
 
 *<+-> Help a friend visiting Pisa for the first time:
 **<+-> Add points of interest (leaning tower, train station, whatever...)
-***<+-> Fill "Description" fields as you like (try with an image of the tower, \texttt{\{\{https://images.app.goo.gl/SWAQCqGn6peVnwH29\}\}})
+***<+-> Fill "Description" fields as you like 
+***<+-> try with an image of the tower, \texttt{\tiny \url{https://upload.wikimedia.org/wikipedia/commons/6/66/The\_Leaning\_Tower\_of\_Pisa\_SB.jpeg} }
 **<+-> Create a map showing a route from the train station to the Leaning Tower
 ***<+-> Draw a path from the station to an imaginary bus stop, then the bus route, and finally the walk to the tower
 ***<+-> At the bus stop, enter details: bus number, direction, stop name, and estimated travel time
