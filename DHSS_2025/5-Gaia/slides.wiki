@@ -23,7 +23,7 @@
 *<+-> Features can be imported too
 
 ==== Import a sample map ====
-*<+-> On your smartphone, use the QRcode to reach the course material:
+*<+-> On your smartphone, use the ''Google lens'' to reach the Google Drive hosting the course material:
 \begin{center}
 <<<../images/GD_QRcode.jpg, scale=0.5>>>
 \end{center}
@@ -39,8 +39,8 @@
 ==== Processing the track on the Web service ====
 *<+-> Sharing your GPX via !GaiaGPS cloud storage! allows easy track viewing on a computer
 *<+-> Access the service at \url{https://www.gaiagps.com/} with your Gaia GPS credentials
-*<+-> Browse your profile to select a track
-*<+-> Click on a track to view its map and update details
+*<+-> Click on the !Saved Items! icon on the left menu
+*<+-> Select the track you uploaded in the previous step to see the map
 
 ==== Gaia GPS Web Service ====
 \begin{center}
@@ -96,9 +96,9 @@
 * Walk to your destination, capturing photos and annotating points of interest in the app
 * Upon returning, visit the Gaia GPS website and download your track as a GPX file
 * Import your track into a new uMap project and/or
-* Add it to the shared map at \url{https://umap.openstreetmap.fr/it/map/dhss_2025_616270}
+* Add it to the shared map at \url{https://umap.openstreetmap.fr/it/map/dhss_2025_616270} (or to your own map)
 * Include your photos in the waypoint descriptions:
-** Use the image link found on the GaiaGPS Web Site
-** Select a waypoint with an image
-** Scroll down and "Open Details Page"
-** Click on the image and right click again to select "Copy image link"
+** Use the image link found on the GaiaGPS Web Site 
+*** Select a waypoint with an image
+*** Scroll down and "Open Details Page"
+*** Click on the image and right click again to select "Copy image link"

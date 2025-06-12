@@ -9,15 +9,19 @@
 *<+-> QGIS provides tools for this task  
 
 ==== Georeferencing: Preparation ====
+*<+-> We want to georeference the map avaliable at 
+**<+-> Download the ''png'' file
+<[code][style = javascript]
+https://it.m.wikipedia.org/wiki/File:Map_Gallia_Tribes_Towns.png
+[code]>
 *<+-> Create a new project and load the reference raster (OSM)  
 *<+-> Adjust the scale to match the area covered in the map  
-*<+-> Observe the code in the bottom right corner: !EPSG:3857 (WGS84/Pseudo-Mercator)!  
-**<+-> This is the usual projection for Web mapping  
+*<+-> Observe the code in the bottom right corner: !EPSG:3857 (WGS84 - Pseudo Mercator)!
 *<+-> Open the Georeferencer tool:  
 **<+-> Select !Layer! -> !Georeferencer...! to open a new window  
 *<+-> In the ''Georeferencer'' window:  
 **<+-> Select !File! -> !Open Raster!  
-**<+-> Locate and open the image file you want to georeference
+**<+-> Locate and open the image file you downloaded
 
 ==== Unreferenced image loaded ====
 \begin{center}  
@@ -28,28 +32,28 @@
 *<+-> Configure transformation settings:  
 **<+-> Select !Settings! -> !Transformation Settings!  
 **<+-> Choose a transformation type (TPS is generally suitable)  
-**<+-> Ensure the SRS is set to EPSG:3857 - WGS84/Pseudo-Mercator  
+**<+-> Ensure the SR is set to EPSG:3857 - WGS84/Pseudo-Mercator  
 **<+-> Specify a target file for the result  
-**<+-> Enable "Load in QGIS when done"  
+**<+-> Enable "Load in project  when done"  
 **<+-> Click OK to apply the settings and return to the Georeferencer window  
 
 ==== Matching Points ====
 *<+-> Repeat the following steps for at least three (distant, non-aligned) points on your map image:  
 **<+-> Identify a recognizable detail on the map image that also appears on the reference raster  
 ***<+-> e.g., in an ancient map of France, ''Lutetia'' corresponds to modern Paris  
-***<+-> Use arrow keys to move and the mouse wheel to zoom, but clicking is disabled  
+***<+-> Use arrow keys to move and the mouse wheel to zoom, or select the ''Hand'' icon to use the mouse  
 **<+-> Click when the crosshair is positioned over the reference detail (e.g., ''Lutetia'')  
 **<+-> A window appears to input the coordinates  
 **<+-> Click the !From Map Canvas! button  
 **<+-> The map and dialog disappear, and you return to the OSM raster with a crosshair pointer  
 **<+-> Locate the corresponding point (e.g., ''Paris'') on the raster and click  
-**<+-> QGIS extracts the geographic coordinates from the raster  
+**<+-> QGIS extracts the geographic coordinates from the OSM raster  
 **<+-> The map reappears with the coordinates filled in  
 **<+-> Click OK and repeat for at least three points  
 
 ==== The map before georeferencing ====
 \begin{center}  
-<<<../images/QGis_georeference2.png, width=\textwidth>>>  
+<<<../images/QGis_georeference2.png, width=0.8\textwidth>>>  
 \end{center}
 
 ==== Running the Georeferencer ====
@@ -59,7 +63,7 @@
 *<+-> Keep the Georeferencer window open and switch to the main QGIS window to inspect the result  
 
 ==== Inspecting the Result ====
-*<+-> The image appears as a new raster layer in the main QGIS window  
+*<+-> The image appears as a new raster layer in the ''Layers'' panel  
 *<+-> To assess the georeferencing accuracy, adjust transparency:  
 **<+-> Right-click the new layer in the !Layers! panel and select !Properties! -> !Transparency!  
 **<+-> Set !Global Opacity! to approximately 50% and click OK  
@@ -69,7 +73,8 @@
 *<+-> If the result is unsatisfactory:  
 **<+-> Remove the layer  
 **<+-> Return to the ''Georeferencer'' window to add more points  
-**<+-> Repeat the georeferencing process  
+**<+-> Repeat the georeferencing process
+***<+-> Hint: use small islands instead of towns
 
 ==== Referenced image generated ====
 \begin{center}  
@@ -84,7 +89,7 @@
 **<+-> Browse your filesystem and set the !Source! field to the path of your new raster  
 
 \begin{center}  
-<<<../images/QGis_loadraster.png, height=0.8\textheight>>>  
+<<<../images/QGis_loadraster.png, height=0.4\textheight>>>  
 \end{center}
 
 ==== More Resources ====  
