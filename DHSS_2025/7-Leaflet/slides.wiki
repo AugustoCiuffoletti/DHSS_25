@@ -8,17 +8,16 @@
 *<+-> The task is simplified by the existence of a powerful open source library, ''leaflet''
 *<+-> In this concluding  tutorial we scratch the surface of this tool to understand its potential
 
-==== How to proceed ====
+!==== How to proceed ====
 *<+-> The tutorial consists in the step-by-step creation of a simple app that:
 **<+-> Displays a map
 **<+-> Allow the user to add markers to the map
 **<+-> Exports the markers as a GeoJSON string
-**<+-> Stores the layer in the cloud (until September 2025)
 *<+-> The tool we are going to use to practice the ''leaflet'' library is Stackblitz (\url{https://stackblitz.com/}), an online IDE for JavaScript
 *<+-> The code for each step can be viewed, tested, and modified as a Stackblitz project
 *<+-> The link to each project is in the title of each slide, and in the course website page dedicated to this topic.
 
-==== Using the Stackblitz IDE ====
+!==== Using the Stackblitz IDE ====
 *<+-> Follow the \href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-1}{project link} for the first step
 *<+-> In the right frame you see the preview of your service, showing a map 
 **<+-> the URL on top of the frame is functional: try it...
@@ -32,7 +31,7 @@
 **<+-> For instance, try to change the string in line 10 in index.html and notice the preview change
 **<+-> Your edits remain local. To save your project you should register on Stackblitz
 
-==== Step 1: the background (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-1}{project}) ====
+!==== Step 1: the background (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-1}{project}) ====
 
 *<+-> The first step in our tutorial consists of using the ''Leaflet'' library to display an OpenStreetMap raster
 *<+-> How to:
@@ -48,7 +47,7 @@
 **<+-> Next we add a background raster, which is ''OpenStreetMap''
 
 
-==== Step 1: Lab activity ====
+!==== Step 1: Lab activity ====
 
 *<+-> Browse the web to find the coordinates of a place at your choice as the center of the raster
 * Modify/remove the zoom factor
@@ -58,7 +57,7 @@ IMPORTANT:
 * you can undo unsaved updates with Ctrl-z
 * after forking and signing up you can save your work
 
-==== Step 2: show the coordinates (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-2}{project})====
+!==== Step 2: show the coordinates (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-2}{project})====
 
 
 *<+-> When the user clicks on the map an alert appears with the coordinates of the click
@@ -71,14 +70,14 @@ IMPORTANT:
 ***<+-> the event descriptor is an object
 ***<+-> we extract the @lat@ and @lng@ fields in the @latlng@ field.
 
-==== Step 2: Lab activity ====
+!==== Step 2: Lab activity ====
 
 * create a named <div> and write within the coordinates. Use 
 <[code][style=javascript]
 document.getElementById("myDiv").textContent = ...
 [code]>
 
-==== Step 3: collect coordinates (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-3}{project}) ====
+!==== Step 3: collect coordinates (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-3}{project}) ====
 
 *<+-> Each click on the map adds a marker, and their coordinates are shown on the page
 *<+-> How to:
@@ -87,11 +86,11 @@ document.getElementById("myDiv").textContent = ...
 ***<+-> its position is computed using the @latlng@ field in the event descriptor
 **<+-> The coordinates are appended to the list in a @div@ element of the DOM
 
-==== Step 3: Lab activity ====
+!==== Step 3: Lab activity ====
 
 * Reverse the order of coordinates: longitude is shown first in the bottom list
 
-==== Step 4: enumerated markers (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-4}{project}) ====
+!==== Step 4: enumerated markers (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-4}{project}) ====
 
 *<+-> A progressive index is assigned to each new point
 *<+-> The index is shown in the list and added as a ''title'' field in the marker definition
@@ -104,12 +103,12 @@ document.getElementById("myDiv").textContent = ...
 **<+-> The marker constructor now takes a second parameter containing the marker options
 ***<+-> among which the @title@ option
 
-==== Step 4: Lab activity ====
+!==== Step 4: Lab activity ====
 
 * Configure the marker as draggable (ignore that the displayed coordinates become inconsistent)
 ** hint: in the @marker@ variable definition add a @draggable: true@ property after the title, separated by a ","
 
-==== Step 5: all markers in an array (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-5}{project})==== 
+!==== Step 5: all markers in an array (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-5}{project})==== 
 
 *<+-> Record the markers in an array to have them accessible
 **<+-> in the previous steps the marker was a local variable in the callback
@@ -119,7 +118,7 @@ document.getElementById("myDiv").textContent = ...
 **<+-> @n@ index corresponds to array length
 ***<+-> no need to increment it
 
-==== Step 5: Lab activity ====
+!==== Step 5: Lab activity ====
 
 * Create a button that fades-out the markers
 * Hint
@@ -129,7 +128,7 @@ for (let m in markers) {...}
 [code]>
 ** use the @setOpacity(0.5)@ on each marker
 
-====Step 6: all markers in a layer (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-6}{project}) ====
+!====Step 6: all markers in a layer (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-6}{project}) ====
 
 *<+-> Having all markers in a layer is more practical than in an array
 *<+-> How to:
@@ -142,28 +141,26 @@ for (let m in markers) {...}
 ***<+-> One for the overlay layers (multiple choice)
 **<+-> See the effect on the layers button top-right in the map
 
-==== Step 6: Lab activity ====
+!==== Step 6: Lab activity ====
 
 * move the @markers@ ''layerGroup'' in the base layers. Any change?
 
-==== Step 7: GeoJSON serialization (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-7}{project})====
+!==== Step 7: GeoJSON serialization (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-7}{project})====
 
 *<+-> It is handy to have a standard string representation of a piece of data (serialization)
-** e.g. to store the data in a file
-* The GeoJSON representation can be easely transformed into a JSON string, and viceversa
-* We want to print in the console the JSON string for our markers
+**<+-> e.g. to store the data in a file
+*<+-> The GeoJSON representation can be easely transformed into a JSON string, and viceversa
+*<+-> We want to print in the console the JSON string for our markers
 *<+-> The @toGeoJSON@ method converts the markers layer into a JavaScript object with the GeoJSON format
 **<+-> alas, in this way we lose the ''title'' field
 *<+-> The @stringify@ method serializes the object as a String object
-*<+-> The string is finally recorded in the log
+*<+-> The string is finally recorded put on the display
 
-==== Step 7: Lab activity ====
+!==== Step 7: Lab activity ====
 
+* Copy the generated GeoJSON and feed it to an online viewer, like \url{https://www.geometrymapper.com/}
 * Is there any way to record the ''title'' field in the JSON string?
-* Study the geoJSON format in the console and find a solution
-* If needed see :
-** \url{https://geojson.org/} for geojson syntax
-** \url{https://leafletjs.com/reference-1.7.1.html\#marker} for the toGeoJSON method
+* Study the GeoJSON format in the console and find a solution
 
 ==== Step 8-10: a map in the cloud ====  
 
