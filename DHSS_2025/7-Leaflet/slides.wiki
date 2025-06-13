@@ -35,16 +35,17 @@
 ==== Step 1: the background (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-1}{project}) ====
 
 *<+-> The first step in our tutorial consists of using the ''Leaflet'' library to display an OpenStreetMap raster
-*<+-> The reference to the library is in the ''package-lock'' file
-*<+-> In the HTML file: 
-**<+-> a @head@ element with the CSS for the ''Leaflet'' library 
-**<+-> a @div@ element for the map (its @id@ is @mapid@)
-*<+-> The index.js file contains the JavaScript code of our App
-*<+-> The capital @L@ stands for the ''Leaflet'' class
-*<+-> So we create a map with two parameters
-**<+-> the id of the DOM element hosting the raster (our @mapid@)
-**<+-> A JavaScript object that describes position of map center and zoom level
-*<+-> Next we define the source for the tiles, which is ''OpenStreetMap''
+*<+-> How to:
+**<+-> The reference to the library is in the ''package-lock'' file
+**<+-> In the HTML file: 
+***<+-> a @head@ element with the CSS for the ''Leaflet'' library 
+***<+-> a @div@ element for the map (its @id@ is @mapid@)
+**<+-> The index.js file contains the JavaScript code of our App
+**<+-> The capital @L@ stands for the ''Leaflet'' class
+**<+-> So we create a map with two parameters
+***<+-> the id of the DOM element hosting the raster (our @mapid@)
+***<+-> A JavaScript object that describes position of map center and zoom level
+**<+-> Next we add a background raster, which is ''OpenStreetMap''
 
 
 ==== Step 1: Lab activity ====
@@ -52,91 +53,98 @@
 *<+-> Browse the web to find the coordinates of a place at your choice as the center of the raster
 * Modify/remove the zoom factor
 IMPORTANT:
-* you '''cannot''' commit your updates on my repo (Error 403)
-* you can ''Connect a repository'' of your own on GitHub (recommened)
-* you can ''Save'' your updates, 
-** but you will loose your work when you switch branch (Discard Changes)
-* you can undo updates with Ctrl-z
-* you can ''Fork'' a branch 
-** this works on a single branch
-* you can clone the whole repository (all branches) in your computer and push it on a new repo
+* relax: you '''cannot''' damage my repo (you'd need my credentials)
+* you may ''Fork'' (button on top-left corner) a branch in a repo of your own (recommended not strictly needed)
+* you can undo unsaved updates with Ctrl-z
+* after forking and signing up you can save your work
 
 ==== Step 2: show the coordinates (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-2}{project})====
 
+
 *<+-> When the user clicks on the map an alert appears with the coordinates of the click
-*<+-> We apply the ''on'' method to the map to catch ''click'' events
-**<+-> the first parameter is the name of the event we want to capture
-**<+-> the second parameter is a callback that takes the event description as a parameter
-**<+-> the callback displays an alert containing data extracted from the event descriptor @e@
-**<+-> the event descriptor is an object
-**<+-> we extract the @lat@ and @lng@ fields in the @latlng@ field.
+*<+-> How to:
+**<+-> The HTML file is identical, we added management of a click event in the JavaScript
+**<+-> We apply the ''on'' method to the map to catch ''click'' events
+***<+-> the first parameter is the name of the event we want to capture
+***<+-> the second parameter is a callback that takes the event description as a parameter
+***<+-> the callback displays an alert containing data extracted from the event descriptor @e@
+***<+-> the event descriptor is an object
+***<+-> we extract the @lat@ and @lng@ fields in the @latlng@ field.
 
 ==== Step 2: Lab activity ====
 
-* Replace the alert with a popup on the click point
-* Instead of the geographical coordinates, print the position of the point in the layer
-** consult \url{https://leafletjs.com/reference-1.7.1.html\#mouseevent}
+* create a named <div> and write within the coordinates. Use 
+<[code][style=javascript]
+document.getElementById("myDiv").textContent = ...
+[code]>
 
 ==== Step 3: collect coordinates (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-3}{project}) ====
 
 *<+-> Each click on the map adds a marker, and their coordinates are shown on the page
-*<+-> The event callback contains the creation of the new marker
-**<+-> its position is computed using the @latlng@ field in the event descriptor
-**<+-> the coordinates are appended to the list in a @div@ element of the DOM
+*<+-> How to:
+**<+-> We add a ''div'' for the coordinates in the html
+**<+-> In the JavaScript we add to the event callback the creation of the new marker
+***<+-> its position is computed using the @latlng@ field in the event descriptor
+**<+-> The coordinates are appended to the list in a @div@ element of the DOM
 
 ==== Step 3: Lab activity ====
 
-* Display the distance of the point from the center instead of its coordinates
-** consult \url{https://leafletjs.com/reference-1.7.1.html\#map-conversion-methods}
+* Reverse the order of coordinates: longitude is shown first in the bottom list
 
 ==== Step 4: enumerated markers (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-4}{project}) ====
 
-*<+-> An progressive index is assigned to each new point
-* The index is shown in the list and added as a ''title'' field in the marker definition
-** the title field is automatically displayed when the mouse hovers on the marker
-*<+-> We add a new global variable @n@
-*<+-> The event callback increments the variable each time it is run
-*<+-> The value of @n@ is displayed on each line in the list
-*<+-> The marker constructor now takes a second parameter containing the marker options
-**<+-> among which the @title@ option
+*<+-> A progressive index is assigned to each new point
+*<+-> The index is shown in the list and added as a ''title'' field in the marker definition
+**<+-> the title field is automatically displayed when the mouse hovers on the marker
+*<+-> How to:
+**<+-> HTML is the same
+**<+-> We add a new global variable @n@ in the JavaScript
+**<+-> The event callback increments the variable each time it is run
+**<+-> The value of @n@ is displayed on each line in the list
+**<+-> The marker constructor now takes a second parameter containing the marker options
+***<+-> among which the @title@ option
 
 ==== Step 4: Lab activity ====
 
 * Configure the marker as draggable (ignore that the displayed coordinates become inconsistent)
-** consult \url{https://leafletjs.com/reference-1.7.1.html\#marker}
-* (advanced) show the coordinates inside the ''title'' and update them when the marker is dragged
-** consult the same manual page of the previous lab activity
+** hint: in the @marker@ variable definition add a @draggable: true@ property after the title, separated by a ","
 
 ==== Step 5: all markers in an array (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-5}{project})==== 
 
 *<+-> Record the markers in an array to have them accessible
-** in the previous steps the marker was a local variable in the callback
-*<+-> Create an array for the markers
-*<+-> Push markers in the array
-*<+-> @n@ index corresponds to array length
-**<+-> no need to increment it
+**<+-> in the previous steps the marker was a local variable in the callback
+*<+-> How to:
+**<+-> Create an array for the markers
+**<+-> Push markers in the array
+**<+-> @n@ index corresponds to array length
+***<+-> no need to increment it
 
 ==== Step 5: Lab activity ====
 
-* Create a button that hides all the markers
-** Use opacity, same manual page of the previous lab activity
+* Create a button that fades-out the markers
+* Hint
+** loop through all items in the array with a for loop
+<[code][style=javascript]
+for (let m in markers) {...}
+[code]>
+** use the @setOpacity(0.5)@ on each marker
 
 ====Step 6: all markers in a layer (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-6}{project}) ====
 
 *<+-> Having all markers in a layer is more practical than in an array
-*<+-> Replace the array with a ''layerGroup'' object added to the map
-*<+-> Replace the push operation with an addLayer applied to the layerGroup
-*<+-> Compute @n@ as the length of the array obtained with the @getLayers@ method applied to the layerGroup
-*<+-> The solution to the previous Lab activity is obtained adding a @control@ for the @markers@ layer
-*<+-> The control creation takes two object arguments
-**<+-> One for the base layers (radio button, just one)
-**<+-> One for the overlay layers (multiple choice)
-*<+-> See the effect on the layers button top-right in the map
+*<+-> How to:
+**<+-> HTML is always the same
+**<+-> Replace the array with a ''layerGroup'' object added to the map (@markers@)
+**<+-> Replace the ''push'' operation with an ''addLayer'' applied to the layerGroup
+**<+-> Add a layer control icon to the map to toggle layer visibility
+**<+-> The control creation takes two object arguments
+***<+-> One for the base layers (radio button, just one)
+***<+-> One for the overlay layers (multiple choice)
+**<+-> See the effect on the layers button top-right in the map
 
 ==== Step 6: Lab activity ====
 
-* Add a popup to all features in the layer
-** consult \url{https://leafletjs.com/reference-1.7.1.html\#layergroup}
+* move the @markers@ ''layerGroup'' in the base layers. Any change?
 
 ==== Step 7: GeoJSON serialization (\href{https://stackblitz.com/github/AugustoCiuffoletti/leafletExercise2025/tree/step-7}{project})====
 
