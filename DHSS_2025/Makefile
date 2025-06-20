@@ -42,7 +42,7 @@ deliver:
 # 5 - Copia i tool per la generazione delle slide
 	rsync -av Makefile compile.sh header* images $(DELIVERYDIR)/DHSS_2025/
 # Copia sul PC della presentazione
-	rsync -av $(DELIVERYDIR)/DHSS_2025/ $(PC_PRESENTAZIONE):Scrivania/dt4h-gis/
+#	rsync -av $(DELIVERYDIR)/DHSS_2025/ $(PC_PRESENTAZIONE):Scrivania/dt4h-gis/
 # Sincronizza il repository github (DHSS:25)
 	cd $(DELIVERYDIR); make deliver 
 

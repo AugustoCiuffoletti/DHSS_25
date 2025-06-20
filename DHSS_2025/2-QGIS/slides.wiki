@@ -79,8 +79,8 @@
 *<+-> Repeat as you like
 *<+-> To move a point feature, 
 **<+-> menu !Edit! -> !Edit geometry! -> !Move Feature!
-**<+-> right click on the point to move
-**<+-> drag to the new position
+**<+-> left click to pick the point you want to move
+**<+-> another left click to release it on the new position
 **<+-> left click to displace the selected point
 *<+-> To exit edit mode, right-click on the !Demo! layer and select !Layer! -> !Toggle Editing!
 
